@@ -1,0 +1,35 @@
+#######################
+
+#######################
+
+import
+
+
+load
+
+clean
+
+  missing values
+  
+  outliers
+  
+  
+  
+feature engineering
+
+
+praparation
+
+  creating a custom function for preparation of test dataset
+
+#########################
+modelling
+#########################
+create error metrics and show scores functions
+create run_model2 kind of custom functions
+
+
+running a few algorithms on whole training dataset
+measure score
+
+dividing train set into smaller train and validation sets
