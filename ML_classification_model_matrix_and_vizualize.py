@@ -19,3 +19,13 @@ def run_model2(model, X_train, y_train, X_test, y_test, verbose=True):
     plot_roc_curve(model, X_test, y_test)                     
     
     return model, accuracy, roc_auc, time_taken
+
+
+### how to run a model with this custom function
+
+from sklearn.ensemble import RandomForestClassifier
+
+params_rf = best_model_rgs_rf   #taken from results of Randomized/Grid Search CV of 'best_model_rgs_rf = model_rgs_rf.best_params_'
+
+model_rf = RandomForestClassifier(**params_rf)
+model_rf, accuracy_rf, roc_auc_rf, tt_rf = run_model2(model_rf, X_train, y_train, X_test, y_test)
