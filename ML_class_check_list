@@ -33,3 +33,17 @@ running a few algorithms on whole training dataset
 measure score
 
 dividing train set into smaller train and validation sets
+fit on training set and test the validation set
+
+# Grid Search CV 1
+take the best parameters, if they are on the boundaries, use second grid search again with the parameters beyond the boundaries
+
+# Load test set
+use custom function created to clean&prepare it as it was for training set
+
+use best model with best estimators on test dataset
+
+join test dataset with index or id or whatever
+
+save the prediction
+
