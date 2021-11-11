@@ -13,7 +13,8 @@ X.head()
 #######################################################################
 ####  Custom map encoding
 
-# defining nominal columns manually
+## defining nominal columns manually / 
+# numeric_columns = X.select_dtypes(exclude = 'object').columns
 
 # ordinal column
 ordinal_column1_map = {
@@ -29,7 +30,7 @@ binary_column1_map = {
     'Y': 1,
 }
 
-# maping the custom encoding
+## maping the custom encoding
 
 X['ordinal_column'] = X.loan_grade.map(ordinal_column1_map)
 X.head()
