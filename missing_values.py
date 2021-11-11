@@ -89,4 +89,13 @@ for index, column in enumerate(df.columns):
         nan_columns[column] = (temp[index], f"{round((temp[index]/df.shape[0])*100, 2)}%") 
 print(nan_columns)
 
+## take the names of columns from the input of the code just above and pass it to XXX/YYY so that you can fill NaN values with mode and median
+df['XXX'].fillna(df['XXX'].mode()[0], inplace=True)
+df['YYY'].fillna(df['YYY'].median(), inplace=True)
 
+
+
+### number of duplicated rows in dataframe
+print('The number of duplicates is {}\n'.format(df.duplicated().sum()))
+print('The total numer of rows is {}\n'.format(df.shape[0]))
+print(f"Ratio is {round((df.duplicated().sum()/df.shape[0])*100, 2)}%")
