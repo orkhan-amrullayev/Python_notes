@@ -50,7 +50,11 @@ missing
 
 #####
 #####
+df.isna().sum()
 
+#or
+
+df.isnull().sum()
 
 # creating a list of columns with non numeric data type content
 
@@ -74,13 +78,15 @@ for label,value in df_new.items():
         df_new[label] = pd.Categorical(value).codes+1
 
         
-#####
-#####
+#####################
+#####################
 
-
-
-
-
-
+## Percentages of NA values.
+nan_columns = dict()
+temp = df.isna().sum()
+for index, column in enumerate(df.columns):
+    if temp[index] != 0:
+        nan_columns[column] = (temp[index], f"{round((temp[index]/df.shape[0])*100, 2)}%") 
+print(nan_columns)
 
 
